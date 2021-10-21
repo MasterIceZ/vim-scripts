@@ -14,11 +14,9 @@ set nobackup
 set noundofile
 set noswapfile
 
-"call plug#begin('C:/Users/User/AppData/Local/nvim/plugged') 
 call plug#begin('~/autoload/plugged')
 Plug 'joshdick/onedark.vim'
 Plug 'iCyMind/NeoSolarized'
-Plug 'neoclide/coc.nvim'
 Plug 'junegunn/vim-easy-align'
 Plug 'https://github.com/junegunn/vim-github-dashboard.git'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
@@ -30,6 +28,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'bfrg/vim-cpp-modern'
+Plug 'prettier/vim-prettier', {'do': 'yarn install' }
 call plug#end()
 colorscheme NeoSolarized
 

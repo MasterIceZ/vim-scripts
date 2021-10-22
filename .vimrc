@@ -21,8 +21,9 @@ set noswapfile
 
 " Vim Plug
 call plug#begin('~/autoload/plugged')
-Plug 'joshdick/onedark.vim'
-Plug 'iCyMind/NeoSolarized'
+" Plug 'joshdick/onedark.vim'
+" Plug 'iCyMind/NeoSolarized'
+Plug 'altercation/vim-colors-solarized'
 Plug 'junegunn/vim-easy-align'
 Plug 'https://github.com/junegunn/vim-github-dashboard.git'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
@@ -36,13 +37,22 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'bfrg/vim-cpp-modern'
 Plug 'prettier/vim-prettier', {'do': 'yarn install' }
 Plug 'preservim/nerdtree'
+Plug 'leafgarland/typescript-vim'
 call plug#end()
-colorscheme NeoSolarized
+
+" Colorsheme
+syntax enable
+if has('gui_running')
+	set background=light
+else
+	set background=dark
+endif
+colorscheme solarized
+" colorscheme NeoSolarized
 
 " Configure by file type
 au Filetype cpp source ~\Desktop\gh\vim-scripts\cpp.vim
 au Filetype javascript source ~\Desktop\gh\vim-scripts\javascript.vim
-
 
 " Nerd Tree
 " autocmd VimEnter * NERDTree

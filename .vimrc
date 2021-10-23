@@ -57,6 +57,7 @@ au Filetype go source ~\Desktop\gh\vim-scripts\go.vim
 " Nerd Tree
 " autocmd VimEnter * NERDTree
 nnoremap <leader>n :NERDTreeFocus <CR>
-nnoremap <C-n> :NERDTree <CR>
 nnoremap <C-t> :NERDTreeToggle <CR>
 nnoremap <C-f> :NERDTreeFind <CR>
+
+

@@ -23,15 +23,12 @@ set noswapfile
 
 " Vim Plug
 call plug#begin('~/autoload/plugged')
-" Plug 'joshdick/onedark.vim'
 " Plug 'iCyMind/NeoSolarized'
 Plug 'altercation/vim-colors-solarized'
 Plug 'junegunn/vim-easy-align'
-" Plug 'https://github.com/junegunn/vim-github-dashboard.git'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-" Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
 Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
-" Plug 'fatih/vim-go', { 'tag': '*' }
+" Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'nsf/gocode', { 'tag': 'v.20150303', 'rtp': 'vim' }
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'vim-airline/vim-airline'
@@ -55,6 +52,7 @@ colorscheme solarized
 " Configure by file type
 au Filetype cpp source ~\Desktop\gh\vim-scripts\cpp.vim
 au Filetype javascript source ~\Desktop\gh\vim-scripts\javascript.vim
+au Filetype go source ~\Desktop\gh\vim-scripts\go.vim
 
 " Nerd Tree
 " autocmd VimEnter * NERDTree

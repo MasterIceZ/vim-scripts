@@ -53,6 +53,7 @@ colorscheme solarized
 au Filetype cpp source ~\Desktop\gh\vim-scripts\cpp.vim
 au Filetype javascript source ~\Desktop\gh\vim-scripts\javascript.vim
 au Filetype go source ~\Desktop\gh\vim-scripts\go.vim
+au Filetype python source ~\Desktop\gh\vim-scripts\python.vim
 
 " Nerd Tree
 " autocmd VimEnter * NERDTree

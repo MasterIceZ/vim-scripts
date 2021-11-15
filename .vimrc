@@ -37,6 +37,7 @@ Plug 'bfrg/vim-cpp-modern'
 Plug 'prettier/vim-prettier', {'do': 'yarn install' }
 Plug 'preservim/nerdtree'
 Plug 'leafgarland/typescript-vim'
+" Plug 'wakatime/vim-wakatime'
 call plug#end()
 
 " Colorsheme
@@ -61,5 +62,4 @@ au Filetype rust source ~\Desktop\gh\vim-scripts\rust.vim
 nnoremap <leader>n :NERDTreeFocus <CR>
 nnoremap <C-t> :NERDTreeToggle <CR>
 nnoremap <C-f> :NERDTreeFind <CR>
-
 

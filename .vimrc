@@ -38,17 +38,19 @@ Plug 'prettier/vim-prettier', {'do': 'yarn install' }
 Plug 'preservim/nerdtree'
 Plug 'leafgarland/typescript-vim'
 " Plug 'wakatime/vim-wakatime'
+" Plug 'octol/vim-cpp-enhanced-highlight'
+Plug 'jsit/toast.vim'
+Plug 'morhetz/gruvbox'
+Plug 'alessandroyorba/despacio'
 call plug#end()
 
 " Colorsheme
 syntax enable
-if has('gui_running')
-	set background=light
-else
-	set background=dark
-endif
-colorscheme solarized
-" colorscheme NeoSolarized
+set background=dark
+" colorscheme despacio
+colorscheme gruvbox
+" colorscheme toast
+" colorscheme solarized
 
 " Configure by file type
 au Filetype cpp source ~\Desktop\gh\vim-scripts\cpp.vim

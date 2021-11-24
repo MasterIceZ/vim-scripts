@@ -1,6 +1,6 @@
 source ~\Desktop\gh\vim-scripts\example\vimrc_example.vim
 
-set gfn=Ubuntu\ Mono:h16
+set gfn=Ubuntu\ Mono:h18
 set nu rnu
 
 autocmd InsertEnter * set nornu

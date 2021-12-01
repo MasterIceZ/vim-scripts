@@ -65,3 +65,7 @@ nnoremap <leader>n :NERDTreeFocus <CR>
 nnoremap <C-t> :NERDTreeToggle <CR>
 nnoremap <C-f> :NERDTreeFind <CR>
 
+set foldmethod=indent
+set foldnestmax=10
+set nofoldenable
+set foldlevel=1

@@ -1,4 +1,5 @@
 source ~\Desktop\gh\vim-scripts\example\vimrc_example.vim
+source ~\Desktop\gh\vim-scripts\folding.vim
 
 set gfn=Ubuntu\ Mono:h18
 set nu rnu
@@ -64,8 +65,3 @@ au Filetype rust source ~\Desktop\gh\vim-scripts\rust.vim
 nnoremap <leader>n :NERDTreeFocus <CR>
 nnoremap <C-t> :NERDTreeToggle <CR>
 nnoremap <C-f> :NERDTreeFind <CR>
-
-set foldmethod=indent
-set foldnestmax=10
-set nofoldenable
-set foldlevel=1

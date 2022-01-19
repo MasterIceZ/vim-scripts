@@ -1,3 +1,4 @@
+" using gVim for Windows
 source ~\Desktop\gh\vim-scripts\example\vimrc_example.vim
 source ~\Desktop\gh\vim-scripts\folding.vim
 
@@ -15,6 +16,8 @@ set ts=4
 set sw=4
 
 au GUIEnter * simalt ~x
+" Open 3 Tabs when open program
+au GUIENTER * tabnew
 au GUIENTER * tabnew
 au GUIENTER * tabn
 
@@ -59,6 +62,7 @@ au Filetype javascript source ~\Desktop\gh\vim-scripts\javascript.vim
 au Filetype go source ~\Desktop\gh\vim-scripts\go.vim
 au Filetype python source ~\Desktop\gh\vim-scripts\python.vim
 au Filetype rust source ~\Desktop\gh\vim-scripts\rust.vim 
+au Filetype haskell source ~\Desktop\gh\vim-scripts\haskell.vim
 
 " Nerd Tree
 " autocmd VimEnter * NERDTree

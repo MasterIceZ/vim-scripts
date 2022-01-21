@@ -57,12 +57,13 @@ colorscheme gruvbox
 " colorscheme solarized
 
 " Configure by file type
-au Filetype cpp source ~\Desktop\gh\vim-scripts\cpp.vim
-au Filetype javascript source ~\Desktop\gh\vim-scripts\javascript.vim
-au Filetype go source ~\Desktop\gh\vim-scripts\go.vim
-au Filetype python source ~\Desktop\gh\vim-scripts\python.vim
-au Filetype rust source ~\Desktop\gh\vim-scripts\rust.vim 
-au Filetype haskell source ~\Desktop\gh\vim-scripts\haskell.vim
+au Filetype cpp source ~\Desktop\gh\vim-scripts\lang\cpp.vim
+au Filetype javascript source ~\Desktop\gh\vim-scripts\lang\javascript.vim
+au Filetype go source ~\Desktop\gh\vim-scripts\lang\go.vim
+au Filetype python source ~\Desktop\gh\vim-scripts\lang\python.vim
+au Filetype rust source ~\Desktop\gh\vim-scripts\lang\rust.vim 
+au Filetype haskell source ~\Desktop\gh\vim-scripts\lang\haskell.vim
+au Filetype typescript source ~\Desktop\gh\vim-scripts\lang\typescript.vim
 
 " Nerd Tree
 " autocmd VimEnter * NERDTree

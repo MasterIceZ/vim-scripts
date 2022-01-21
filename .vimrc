@@ -41,7 +41,7 @@ Plug 'bfrg/vim-cpp-modern'
 Plug 'prettier/vim-prettier', {'do': 'yarn install' }
 Plug 'preservim/nerdtree'
 Plug 'leafgarland/typescript-vim'
-" Plug 'wakatime/vim-wakatime'
+Plug 'wakatime/vim-wakatime'
 " Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'jsit/toast.vim'
 Plug 'morhetz/gruvbox'

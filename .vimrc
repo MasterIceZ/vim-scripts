@@ -2,7 +2,8 @@
 source ~\Desktop\gh\vim-scripts\example\vimrc_example.vim
 source ~\Desktop\gh\vim-scripts\folding.vim
 
-set gfn=Ubuntu\ Mono:h18
+" set gfn=Ubuntu\ Mono:h18
+set gfn=SF_Mono:h18
 set nu rnu
 
 autocmd InsertEnter * set nornu
@@ -46,6 +47,10 @@ Plug 'wakatime/vim-wakatime'
 Plug 'jsit/toast.vim'
 Plug 'morhetz/gruvbox'
 Plug 'alessandroyorba/despacio'
+Plug 'ryanoasis/vim-devicons'
+" Plug 'SirVer/ultisnips'
+Plug 'mhinz/vim-startify'
+Plug 'luochen1990/rainbow'
 call plug#end()
 
 " Colorsheme
@@ -56,7 +61,11 @@ colorscheme gruvbox
 " colorscheme toast
 " colorscheme solarized
 
+set encoding=UTF-8
+let g:rainbow_active = 1
+
 " Configure by file type
+au Filetype c source ~\Desktop\gh\vim-scripts\lang\c.vim
 au Filetype cpp source ~\Desktop\gh\vim-scripts\lang\cpp.vim
 au Filetype javascript source ~\Desktop\gh\vim-scripts\lang\javascript.vim
 au Filetype go source ~\Desktop\gh\vim-scripts\lang\go.vim
@@ -64,6 +73,7 @@ au Filetype python source ~\Desktop\gh\vim-scripts\lang\python.vim
 au Filetype rust source ~\Desktop\gh\vim-scripts\lang\rust.vim 
 au Filetype haskell source ~\Desktop\gh\vim-scripts\lang\haskell.vim
 au Filetype typescript source ~\Desktop\gh\vim-scripts\lang\typescript.vim
+au Filetype java source ~\Desktop\gh\vim-scripts\lang\java.vim
 
 " Nerd Tree
 " autocmd VimEnter * NERDTree

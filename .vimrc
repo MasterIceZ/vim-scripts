@@ -25,10 +25,10 @@ set ts=4
 set sw=4
 
 au GUIEnter * simalt ~x
-" Open 3 Tabs when open program for TOI/IMSO
-au GUIENTER * tabnew
-au GUIENTER * tabnew
-au GUIENTER * tabn
+if !contest
+	au GUIENTER * tabnew
+	au GUIENTER * tabn
+endif
 
 set nobackup
 set noundofile

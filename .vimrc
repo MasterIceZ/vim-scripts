@@ -4,7 +4,9 @@ source ~\Desktop\gh\vim-scripts\example\vimrc_example.vim
 
 " for programming contest
 let contest = 0
-if contest
+let name = expand('%:t:r')
+let splited_name = split(name, '_')
+if contest || (tolower(splited_name[0]) == 'contest' && len(splited_name) >= 2)
 	au FileType cpp source ~\Desktop\gh\vim-scripts\contest.vim
 endif
 

@@ -3,10 +3,11 @@ source ~\Desktop\gh\vim-scripts\example\vimrc_example.vim
 " source ~\Desktop\gh\vim-scripts\folding.vim
 
 " for programming contest
-let contest = 0
+let contest = 1
 let name = expand('%:t:r')
 let splited_name = split(name, '_')
-if contest || (tolower(splited_name[0]) == 'contest' && len(splited_name) >= 2)
+let contest_condition = (contest || (tolower(splited_name[0])) == 'contest' && len(splited_name) >= 2)
+if contest_condition
 	au FileType cpp source ~\Desktop\gh\vim-scripts\contest.vim
 endif
 
@@ -25,7 +26,7 @@ set ts=4
 set sw=4
 
 au GUIEnter * simalt ~x
-if !contest
+if !contest_condition
 	au GUIENTER * tabnew
 	au GUIENTER * tabn
 endif
@@ -74,7 +75,7 @@ let g:rainbow_active = 1
 
 " Configure by file type
 au Filetype c source ~\Desktop\gh\vim-scripts\lang\c.vim
-if contest == 0
+if !contest_condition
 	au Filetype cpp source ~\Desktop\gh\vim-scripts\lang\cpp.vim
 endif
 au Filetype javascript source ~\Desktop\gh\vim-scripts\lang\javascript.vim

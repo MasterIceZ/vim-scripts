@@ -1,6 +1,4 @@
 vsplit
-e output.txt
-split
 e input.txt
 
 set nowrap
@@ -11,4 +9,5 @@ syntax enable
 vertical resize 30
 
 nnoremap <F8> :w <CR> :!g++ -Wall -std=c++11 -O2 -D_DEBUG % -o %:t:r <CR>
-nnoremap <F10> :!%:t:r < input.txt > output.txt <CR>
+nnoremap <F10> :!%:t:r < input.txt <CR>
+nnoremap <S-F10> :!%:t:r <CR>

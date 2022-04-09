@@ -1,6 +1,12 @@
 " using gVim for Windows
 source ~\Desktop\gh\vim-scripts\example\vimrc_example.vim
-source ~\Desktop\gh\vim-scripts\folding.vim
+" source ~\Desktop\gh\vim-scripts\folding.vim
+
+" for programming contest
+let contest = 0
+if contest
+	au FileType cpp source ~\Desktop\gh\vim-scripts\contest.vim
+endif
 
 " set gfn=Ubuntu\ Mono:h18
 set gfn=SF_Mono:h18
@@ -17,7 +23,7 @@ set ts=4
 set sw=4
 
 au GUIEnter * simalt ~x
-" Open 3 Tabs when open program
+" Open 3 Tabs when open program for TOI/IMSO
 au GUIENTER * tabnew
 au GUIENTER * tabnew
 au GUIENTER * tabn
@@ -66,7 +72,9 @@ let g:rainbow_active = 1
 
 " Configure by file type
 au Filetype c source ~\Desktop\gh\vim-scripts\lang\c.vim
-au Filetype cpp source ~\Desktop\gh\vim-scripts\lang\cpp.vim
+if contest == 0
+	au Filetype cpp source ~\Desktop\gh\vim-scripts\lang\cpp.vim
+endif
 au Filetype javascript source ~\Desktop\gh\vim-scripts\lang\javascript.vim
 au Filetype go source ~\Desktop\gh\vim-scripts\lang\go.vim
 au Filetype python source ~\Desktop\gh\vim-scripts\lang\python.vim

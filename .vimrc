@@ -6,8 +6,14 @@ source ~\Desktop\gh\vim-scripts\example\vimrc_example.vim
 let contest = 1
 let name = expand('%:t:r')
 let splited_name = split(name, '_')
-let contest_condition = (contest || (tolower(splited_name[0])) == 'contest' && len(splited_name) >= 2)
+let extend = expand('%:e')
+let contest_condition = (contest || (tolower(splited_name[0])) == 'contest' && len(splited_name) >= 2) && (tolower(extend) == 'cc' || tolower(extend) == 'cpp' )
 if contest_condition
+	autocmd GUIEnter * vsp input.txt
+	autocmd GUIEnter * vertical resize 30
+	autocmd GUIEnter * wincmd p
+"	vertical resize 30
+"	autocmd VimEnter * wincmd p
 	au FileType cpp source ~\Desktop\gh\vim-scripts\contest.vim
 endif
 

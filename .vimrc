@@ -17,7 +17,7 @@ if contest_condition
 "	vertical resize 30
 "	autocmd VimEnter * wincmd p
 "	au FileType cpp source ~\Desktop\gh\vim-scripts\contest.vim
-	exe 'source ' . s:dir_path . '\contest.vim'
+	exe 'source ' . g:dir_path . '\contest.vim'
 endif
 
 " set gfn=Ubuntu\ Mono:h18

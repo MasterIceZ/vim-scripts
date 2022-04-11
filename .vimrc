@@ -1,5 +1,7 @@
+let g:dir_path = '~\Desktop\gh\vim-scripts'
+
 " using gVim for Windows
-source ~\Desktop\gh\vim-scripts\example\vimrc_example.vim
+exe 'source ' . g:dir_path . '\example\vimrc_example.vim'
 " source ~\Desktop\gh\vim-scripts\folding.vim
 
 " for programming contest
@@ -14,7 +16,8 @@ if contest_condition
 	autocmd GUIEnter * wincmd p
 "	vertical resize 30
 "	autocmd VimEnter * wincmd p
-	au FileType cpp source ~\Desktop\gh\vim-scripts\contest.vim
+"	au FileType cpp source ~\Desktop\gh\vim-scripts\contest.vim
+	exe 'source ' . s:dir_path . '\contest.vim'
 endif
 
 " set gfn=Ubuntu\ Mono:h18
@@ -80,17 +83,18 @@ set encoding=UTF-8
 let g:rainbow_active = 1
 
 " Configure by file type
-au Filetype c source ~\Desktop\gh\vim-scripts\lang\c.vim
+let s:lang_path = g:dir_path . '\lang'
+au Filetype c exec 'source ' . s:lang_path . '\c.vim'
 if !contest_condition
-	au Filetype cpp source ~\Desktop\gh\vim-scripts\lang\cpp.vim
+	au Filetype cpp exec 'source ' . s:lang_path . '\cpp.vim'
 endif
-au Filetype javascript source ~\Desktop\gh\vim-scripts\lang\javascript.vim
-au Filetype go source ~\Desktop\gh\vim-scripts\lang\go.vim
-au Filetype python source ~\Desktop\gh\vim-scripts\lang\python.vim
-au Filetype rust source ~\Desktop\gh\vim-scripts\lang\rust.vim 
-au Filetype haskell source ~\Desktop\gh\vim-scripts\lang\haskell.vim
-au Filetype typescript source ~\Desktop\gh\vim-scripts\lang\typescript.vim
-au Filetype java source ~\Desktop\gh\vim-scripts\lang\java.vim
+au Filetype javascript exec 'source ' . s:lang_path . '\javascript.vim'
+au Filetype typescript exec 'source ' . s:lang_path . '\typescript.vim'
+au Filetype go exec 'source ' . s:lang_path . '\go.vim'
+au Filetype python exec 'source ' . s:lang_path . '\python.vim'
+au Filetype haskell exec 'source ' . s:lang_path . '\haskell.vim'
+au Filetype rust exec 'source ' . s:lang_path . '\rust.vim'
+au Filetype java exec 'source ' . s:lang_path . '\java.vim'
 
 " Nerd Tree
 " autocmd VimEnter * NERDTree

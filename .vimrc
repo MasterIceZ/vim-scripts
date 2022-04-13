@@ -40,44 +40,50 @@ if !contest_condition
 	au GUIENTER * tabn
 endif
 
+set nowrap
 set nobackup
 set noundofile
 set noswapfile
 
 " Vim Plug
 call plug#begin('~/autoload/plugged')
+
+" colorScheme
 " Plug 'iCyMind/NeoSolarized'
+Plug 'morhetz/gruvbox'
 Plug 'altercation/vim-colors-solarized'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'jsit/toast.vim'
+Plug 'mhartington/oceanic-next'
+Plug 'alessandroyorba/despacio'
+
+" editor
 Plug 'junegunn/vim-easy-align'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
-" Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'nsf/gocode', { 'tag': 'v.20150303', 'rtp': 'vim' }
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 Plug 'bfrg/vim-cpp-modern'
 Plug 'prettier/vim-prettier', {'do': 'yarn install' }
 Plug 'preservim/nerdtree'
 Plug 'leafgarland/typescript-vim'
-Plug 'wakatime/vim-wakatime'
 " Plug 'octol/vim-cpp-enhanced-highlight'
-Plug 'jsit/toast.vim'
-Plug 'morhetz/gruvbox'
-Plug 'alessandroyorba/despacio'
 Plug 'ryanoasis/vim-devicons'
-" Plug 'SirVer/ultisnips'
 Plug 'mhinz/vim-startify'
 Plug 'luochen1990/rainbow'
+Plug 'nathanaelkane/vim-indent-guides'
+
 call plug#end()
 
 " Colorsheme
 syntax enable
 set background=dark
 " colorscheme despacio
-colorscheme gruvbox
+" colorscheme gruvbox
 " colorscheme toast
 " colorscheme solarized
+colorscheme OceanicNext
 
 set encoding=UTF-8
 let g:rainbow_active = 1
@@ -101,3 +107,6 @@ au Filetype java exec 'source ' . s:lang_path . '\java.vim'
 nnoremap <leader>n :NERDTreeFocus <CR>
 nnoremap <C-t> :NERDTreeToggle <CR>
 nnoremap <C-f> :NERDTreeFind <CR>
+
+" Indent Guides
+nnoremap <C-i> :IndentGuidesToggle <CR>

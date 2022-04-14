@@ -1,0 +1,1 @@
+.vimrc with some extension which is extended from KU01 .vimrc's which explained in my blog. Some extension which written in C++ (.cc file) can be found at https://github.com/MasterIceZ/archive/tree/main/cpp-template. You can visit there if you want to get update.

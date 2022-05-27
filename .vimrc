@@ -90,6 +90,7 @@ let g:rainbow_active = 1
 
 " Configure by file type
 let s:lang_path = g:dir_path . '\lang'
+
 au Filetype c exec 'source ' . s:lang_path . '\c.vim'
 if !contest_condition
 	au Filetype cpp exec 'source ' . s:lang_path . '\cpp.vim'

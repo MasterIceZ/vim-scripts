@@ -5,7 +5,7 @@ exe 'source ' . g:dir_path . '\example\vimrc_example.vim'
 " source ~\Desktop\gh\vim-scripts\folding.vim
 
 " for programming contest
-let contest = 1
+let contest = 0
 let name = expand('%:t:r')
 let splited_name = split(name, '_')
 let extend = expand('%:e')

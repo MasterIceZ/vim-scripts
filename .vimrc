@@ -21,7 +21,8 @@ if contest_condition
 endif
 
 " set gfn=Ubuntu\ Mono:h18
-set gfn=SF_Mono:h18
+" set gfn=SF_Mono:h18
+set guifont=SF_Mono:h18:W600:cANSI:qDRAFT
 set nu rnu
 
 autocmd InsertEnter * set nornu

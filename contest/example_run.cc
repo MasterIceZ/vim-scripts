@@ -28,7 +28,7 @@ int main(int argc, char* argv[]){
 	for(int i=1; i<=n; ++i){
 		create_input();
 		auto start_time = chrono::steady_clock::now();
-		cout << "Testcase #" << i << ":\n";
+		cout << "\xE2\x9C\x94 Testcase #" << i << ":\n";
 		system(line.c_str());
 		cout << "\n";
 		auto end_time = chrono::steady_clock::now();

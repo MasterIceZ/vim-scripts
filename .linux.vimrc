@@ -12,12 +12,14 @@ let splited_name = split(name, '_')
 let extend = expand('%:e')
 let contest_condition = (contest || (tolower(splited_name[0])) == 'contest' && len(splited_name) >= 2) && (tolower(extend) == 'cc' || tolower(extend) == 'cpp' )
 if contest_condition
-	autocmd GUIEnter * vsp input.txt
-	autocmd GUIEnter * vertical resize 30
-	autocmd GUIEnter * wincmd p
+"	autocmd GUIEnter * vsp input.txt
+"	autocmd GUIEnter * vertical resize 30
+"	autocmd GUIEnter * wincmd p
 "	vertical resize 30
 "	autocmd VimEnter * wincmd p
 "	au FileType cpp source ~\Desktop\gh\vim-scripts\contest.vim
+	autocmd VimEnter * vsp input.txt
+	autocmd VimEnter * vertical resize 30
 	exe 'source ' . g:dir_path . '/linux_contest.vim'
 endif
 

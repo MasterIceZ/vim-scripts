@@ -25,7 +25,6 @@ int main(int argc, char* argv[]){
 	int n = stoi(tmp);
 	string fileName = to_string(argv[1]);
 	string line = ".//" + fileName + ".exe < buffer.txt";
-	cout << "executing command : " << line << "\n";
 	for(int i=1; i<=n; ++i){
 		create_input();
 		auto start_time = chrono::steady_clock::now();

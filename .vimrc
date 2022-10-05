@@ -74,6 +74,9 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'mhinz/vim-startify'
 Plug 'luochen1990/rainbow'
 Plug 'nathanaelkane/vim-indent-guides'
+Plug 'othree/html5.vim'
+Plug 'pangloss/vim-javascript'
+Plug 'evanleck/vim-svelte', {'branch': 'main'}
 
 call plug#end()
 

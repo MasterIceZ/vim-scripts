@@ -19,11 +19,23 @@ inline void create_input(){
 	file.close();
 }
 
+inline string format_fileName(string name){
+	string res = "";
+	for(auto x: name){
+		if(x == '.'){
+			break;
+		}
+		res += to_string((char) x);
+	}
+	return res;
+}
+
 int main(int argc, char* argv[]){
 	string tmp;
 	getline(cin, tmp);
 	int n = stoi(tmp);
 	string fileName = to_string(argv[1]);
+	fileName = format_fileName(fileName);
 	string line = ".\\" + fileName + ".exe < buffer.txt";
 	for(int i=1; i<=n; ++i){
 		create_input();

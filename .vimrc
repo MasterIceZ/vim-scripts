@@ -31,6 +31,8 @@ set belloff=all
 
 inoremap {<CR> {<CR>}<ESC>O
 
+" map p "+gP
+
 set si
 set ts=4
 set sw=4

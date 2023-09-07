@@ -1,5 +1,6 @@
 "let g:dir_path = '~\Desktop\gh\vim-scripts'
-let g:dir_path = '~/vim-scripts'
+"let g:dir_path = '~/vim-scripts'
+let g:dir_path = '~/Documents/vim-scripts'
 
 " using gVim for Windows
 exe 'source ' . g:dir_path . '/linux_example/vimrc_example.vim'
@@ -24,8 +25,8 @@ if contest_condition
 endif
 
 " set gfn=Ubuntu\ Mono:h18
-" set gfn=SF_Mono:h18
-set guifont=SF_Mono:h18:W600:cANSI:qDRAFT
+set gfn=SF_Mono:h18
+" set guifont=SF_Mono:h18:W600:cANSI:qDRAFT
 set nu rnu
 
 autocmd InsertEnter * set nornu
@@ -38,7 +39,7 @@ set si
 set ts=4
 set sw=4
 
-au GUIEnter * simalt ~x
+" au GUIEnter * simalt ~x
 if !contest_condition
 	au GUIENTER * tabnew
 	au GUIENTER * tabn

@@ -7,7 +7,7 @@ exe 'source ' . g:dir_path . '/linux_example/vimrc_example.vim'
 " source ~\Desktop\gh\vim-scripts\folding.vim
 
 " for programming contest
-let contest = 1
+let contest = 0
 let name = expand('%:t:r')
 let splited_name = split(name, '_')
 let extend = expand('%:e')
@@ -50,6 +50,9 @@ set nobackup
 set noundofile
 set noswapfile
 
+syntax on
+set t_Co=256
+
 " Vim Plug
 call plug#begin('~/autoload/plugged')
 
@@ -62,6 +65,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'jsit/toast.vim'
 Plug 'mhartington/oceanic-next'
 Plug 'alessandroyorba/despacio'
+Plug 'dikiaap/minimalist'
 
 " editor
 Plug 'junegunn/vim-easy-align'
@@ -78,6 +82,7 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'mhinz/vim-startify'
 Plug 'luochen1990/rainbow'
 Plug 'nathanaelkane/vim-indent-guides'
+Plug 'chakrit/vim-thai-keys'
 
 call plug#end()
 
@@ -88,7 +93,8 @@ set background=dark
 " colorscheme gruvbox
 " colorscheme toast
 " colorscheme solarized
-colorscheme OceanicNext
+" colorscheme OceanicNext
+colorscheme minimalist
 
 set encoding=UTF-8
 let g:rainbow_active = 1

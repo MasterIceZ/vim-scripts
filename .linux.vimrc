@@ -7,22 +7,22 @@ exe 'source ' . g:dir_path . '/linux_example/vimrc_example.vim'
 " source ~\Desktop\gh\vim-scripts\folding.vim
 
 " for programming contest
-let contest = 0
-let name = expand('%:t:r')
-let splited_name = split(name, '_')
-let extend = expand('%:e')
-let contest_condition = (contest || (tolower(splited_name[0])) == 'contest' && len(splited_name) >= 2) && (tolower(extend) == 'cc' || tolower(extend) == 'cpp' )
-if contest_condition
-"	autocmd GUIEnter * vsp input.txt
-"	autocmd GUIEnter * vertical resize 30
-"	autocmd GUIEnter * wincmd p
-"	vertical resize 30
-"	autocmd VimEnter * wincmd p
-"	au FileType cpp source ~\Desktop\gh\vim-scripts\contest.vim
-	autocmd VimEnter * vsp input.txt
-	autocmd VimEnter * vertical resize 30
-	exe 'source ' . g:dir_path . '/linux_contest.vim'
-endif
+" let contest = 0
+" let name = expand('%:t:r')
+" let splited_name = split(name, '_')
+" let extend = expand('%:e')
+" let contest_condition = (contest || (tolower(splited_name[0])) == 'contest' && len(splited_name) >= 2) && (tolower(extend) == 'cc' || tolower(extend) == 'cpp' )
+" if contest_condition
+" "	autocmd GUIEnter * vsp input.txt
+" "	autocmd GUIEnter * vertical resize 30
+" "	autocmd GUIEnter * wincmd p
+" "	vertical resize 30
+" "	autocmd VimEnter * wincmd p
+" "	au FileType cpp source ~\Desktop\gh\vim-scripts\contest.vim
+" 	autocmd VimEnter * vsp input.txt
+" 	autocmd VimEnter * vertical resize 30
+" 	exe 'source ' . g:dir_path . '/linux_contest.vim'
+" endif
 
 " set gfn=Ubuntu\ Mono:h18
 set gfn=SF_Mono:h18
@@ -40,18 +40,19 @@ set ts=4
 set sw=4
 
 " au GUIEnter * simalt ~x
-if !contest_condition
-	au GUIENTER * tabnew
-	au GUIENTER * tabn
-endif
+" if !contest_condition
+" 	au GUIENTER * tabnew
+" 	au GUIENTER * tabn
+" endif
 
 set nowrap
 set nobackup
 set noundofile
 set noswapfile
 
+set termguicolors
 syntax on
-set t_Co=256
+" set t_Co=256
 
 " Vim Plug
 call plug#begin('~/autoload/plugged')
@@ -66,23 +67,24 @@ Plug 'jsit/toast.vim'
 Plug 'mhartington/oceanic-next'
 Plug 'alessandroyorba/despacio'
 Plug 'dikiaap/minimalist'
+Plug 'ghifarit53/tokyonight-vim'
 
 " editor
 Plug 'junegunn/vim-easy-align'
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+" Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
-Plug 'nsf/gocode', { 'tag': 'v.20150303', 'rtp': 'vim' }
+" Plug 'nsf/gocode', { 'tag': 'v.20150303', 'rtp': 'vim' }
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'bfrg/vim-cpp-modern'
 Plug 'prettier/vim-prettier', {'do': 'yarn install' }
-Plug 'preservim/nerdtree'
+" Plug 'preservim/nerdtree'
 Plug 'leafgarland/typescript-vim'
 " Plug 'octol/vim-cpp-enhanced-highlight'
-Plug 'ryanoasis/vim-devicons'
+" Plug 'ryanoasis/vim-devicons'
 Plug 'mhinz/vim-startify'
 Plug 'luochen1990/rainbow'
 Plug 'nathanaelkane/vim-indent-guides'
-Plug 'chakrit/vim-thai-keys'
+" Plug 'chakrit/vim-thai-keys'
 
 call plug#end()
 
@@ -94,7 +96,13 @@ set background=dark
 " colorscheme toast
 " colorscheme solarized
 " colorscheme OceanicNext
-colorscheme minimalist
+" colorscheme minimalist
+
+" TOKYO NIGHT SCHEME
+let g:tokyonight_style = 'night' " available: night, storm
+let g:tokyonight_enable_italic = 1
+
+colorscheme tokyonight
 
 set encoding=UTF-8
 let g:rainbow_active = 1
@@ -103,9 +111,10 @@ let g:rainbow_active = 1
 let s:lang_path = g:dir_path . '/lang'
 
 au Filetype c exec 'source ' . s:lang_path . '/c.vim'
-if !contest_condition
-	au Filetype cpp exec 'source ' . s:lang_path . '/cpp.vim'
-endif
+" if !contest_condition
+" 	au Filetype cpp exec 'source ' . s:lang_path . '/cpp.vim'
+" endif
+au Filetype cpp exec 'source ' . s:lang_path . '/cpp.vim'
 au Filetype javascript exec 'source ' . s:lang_path . '/javascript.vim'
 au Filetype typescript exec 'source ' . s:lang_path . '/typescript.vim'
 au Filetype go exec 'source ' . s:lang_path . '/go.vim'
@@ -116,9 +125,11 @@ au Filetype java exec 'source ' . s:lang_path . '/java.vim'
 
 " Nerd Tree
 " autocmd VimEnter * NERDTree
-nnoremap <leader>n :NERDTreeFocus <CR>
-nnoremap <C-t> :NERDTreeToggle <CR>
-nnoremap <C-f> :NERDTreeFind <CR>
+" nnoremap <leader>n :NERDTreeFocus <CR>
+" nnoremap <C-t> :NERDTreeToggle <CR>
+" nnoremap <C-f> :NERDTreeFind <CR>
 
 " Indent Guides
 nnoremap <C-i> :IndentGuidesToggle <CR>
+
+noremap <TAB> %

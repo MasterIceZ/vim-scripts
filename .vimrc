@@ -79,6 +79,7 @@ Plug 'nathanaelkane/vim-indent-guides'
 Plug 'othree/html5.vim'
 Plug 'pangloss/vim-javascript'
 Plug 'evanleck/vim-svelte', {'branch': 'main'}
+Plug 'vimsence/vimsence'
 
 call plug#end()
 

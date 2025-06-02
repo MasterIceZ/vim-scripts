@@ -37,20 +37,20 @@ call plug#begin('~/autoload/plugged')
 
 " colorScheme
 " Plug 'iCyMind/NeoSolarized'
-Plug 'morhetz/gruvbox'
-Plug 'altercation/vim-colors-solarized'
+" Plug 'morhetz/gruvbox'
+" Plug 'altercation/vim-colors-solarized'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'jsit/toast.vim'
-Plug 'mhartington/oceanic-next'
-Plug 'alessandroyorba/despacio'
-Plug 'dikiaap/minimalist'
+" Plug 'jsit/toast.vim'
+" Plug 'mhartington/oceanic-next'
+" Plug 'alessandroyorba/despacio'
+" Plug 'dikiaap/minimalist'
 Plug 'ghifarit53/tokyonight-vim'
 
 " editor
 Plug 'junegunn/vim-easy-align'
 " Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
+" Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
 " Plug 'nsf/gocode', { 'tag': 'v.20150303', 'rtp': 'vim' }
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'bfrg/vim-cpp-modern'
@@ -64,6 +64,7 @@ Plug 'luochen1990/rainbow'
 Plug 'nathanaelkane/vim-indent-guides'
 " Plug 'chakrit/vim-thai-keys'
 Plug 'vimsence/vimsence'
+Plug 'github/copilot.vim'
 
 call plug#end()
 
